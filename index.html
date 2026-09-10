@@ -1,113 +1,327 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tristan Portfolio</title>
+  <title>Tristan Louis — Aspired Data Engineer </title>
+  <meta name="description" content="Portfolio of Tristan Louis — Data Engineer and Full-Stack Developer building intelligent, human-centered software." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
+
+  <!-- ============ LANDING ============ -->
   <div id="landingPage" class="landing">
+    <div class="landing-bg" aria-hidden="true">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="grid-overlay"></div>
+    </div>
+
     <div class="landing-content">
       <div class="profile-pic">
-        <img src="images/me.png" alt="Tristan Profile Photo" class="profile-image">
+        <img src="images/me.png" alt="Tristan Louis" class="profile-image">
       </div>
+      <p class="eyebrow">Portfolio · 2026</p>
       <h1>Tristan Louis</h1>
-      <p>Computer Science Graduate | Data Engineer | Full-Stack Engineer</p>
-      <button id="enterButton">Enter</button>
+      <p class="tagline">
+        College Student <span class="dot">·</span>
+        Aspired Data Engineer <span class="dot">
+      </p>
+      <button id="enterButton">
+        <span>Enter Portfolio</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </button>
     </div>
   </div>
 
-  <header class="hidden">
-  <div class="header-content">
-    <img src="images/logo.png" alt="Tristan Louis Logo" class="site-logo" />
-    <h1>Welcome to My Portfolio</h1>
-  </div>
-  <nav>
-    <button data-section="about">About</button>
-    <button data-section="projects">Projects</button>
-    <button data-section="certificates">Certificates</button>
-    <button data-section="contact">Contact</button>
-    <button data-section="resume">Resume</button>
-  </nav>
-</header>
+  <!-- ============ HEADER / NAV ============ -->
+  <header class="hidden" id="siteHeader">
+    <div class="nav-wrap">
+      <a href="#" class="brand" aria-label="Home">
+        <img src="images/logo.png" alt="" class="site-logo" />
+        <span class="brand-name">Tristan&nbsp;Louis</span>
+      </a>
 
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="mainNav">
+        <button data-section="about" class="active">About</button>
+        <button data-section="projects">Projects</button>
+        <button data-section="skills">Skills</button>
+        <button data-section="certificates">Certificates</button>
+        <button data-section="resume">Resume</button>
+        <button data-section="contact">Contact</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============ MAIN ============ -->
   <main>
-    <section id="about" class="hidden section">
-      <h2>About Me</h2>
-      <p> 
-        I believe the best technology is intuitive, almost magical, so I don't simply code, but craft experiences. That mental attitude is fueled by my experience as a first-generation Haitian-American graduate—a process that taught me an unrelenting passion for turning bold visions into reality. My hope is always to uncover the human touch behind the code. When I built an AI sports highlight creator, it wasn't just about information, but about teaching a machine to naturally understand the highlight feeling of a game. With my voice-based grocery guide, the challenge was creating a seamless, forward-predicting experience that simulates a regular conversation. With my background in machine learning, data engineering, and full-stack development, I love taking creative 'what-ifs' and making them into real-life, uncomplicated solutions. I want to carry this blend of visionary thinking, intuitive design, and passionate execution to an organization that shares a dedication to building technology that is intelligent, yet more importantly, deeply human.
-      </p>
+
+    <!-- ABOUT -->
+    <section id="about" class="section hidden">
+      <div class="section-head">
+        <p class="eyebrow">01 — About</p>
+        <h2>Crafting technology that feels human.</h2>
+      </div>
+      <div class="about-grid">
+        <p class="lede">
+          I believe the best technology is intuitive — almost magical. So I don't simply code; I craft experiences.
+        </p>
+        <div class="about-body">
+          <p>
+            That mindset is fueled by my experience as a first-generation Haitian-American graduate, a process that taught me an unrelenting passion for turning bold visions into reality. My hope is always to uncover the human touch behind the code.
+          </p>
+          <p>
+            When I built an AI sports highlight creator, it wasn't just about information — it was about teaching a machine to naturally understand the highlight feeling of a game. With my voice-based grocery guide, the challenge was creating a seamless, forward-predicting experience that simulates a regular conversation.
+          </p>
+          <p>
+            With my background in machine learning, data engineering, and full-stack development, I love taking creative "what-ifs" and turning them into real, uncomplicated solutions. I want to carry this blend of visionary thinking, intuitive design, and passionate execution to an organization that shares a dedication to building technology that is intelligent — yet, more importantly, deeply human.
+          </p>
+        </div>
+      </div>
     </section>
 
-    <section id="projects" class="hidden section">
-  <h2>Projects</h2>
+    <!-- PROJECTS -->
+    <section id="projects" class="section hidden">
+      <div class="section-head">
+        <p class="eyebrow">02 — Projects</p>
+        <h2>Selected work.</h2>
+      </div>
 
-  <div class="project-card">
-    <h3>
-      <a href="https://github.com/Tristdissmiss/Video-Processing-with-XGB-Classifier-OpenCV-Filters-and-Transitions" target="_blank">
-        AI-powered Video Processing
-      </a>
-    </h3>
-    <p>Developed a system to create highlight reels from sports footage.</p> 
-  </div>
+      <div class="projects-grid">
 
-  <div class="project-card">
-    <h3>
-      <a href="https://github.com/Tristdissmiss/Predictive-Analytics-for-Diabetes-Management" target="_blank">
-        Predictive Analytics for Diabetes Management
-      </a>
-    </h3>
-    <p>Applied ML techniques to improve health outcomes and forecast emergency risk.</p>
-  </div>
+        <!-- FEATURED -->
+        <a class="project-card featured"
+           href="https://github.com/Tristdissmiss/Global_News"
+           target="_blank" rel="noopener">
+          <div class="project-top">
+            <span class="chip chip-featured">Featured</span>
+            <span class="chip">ETL · NLP · FastAPI</span>
+          </div>
+          <h3>Global News Intelligence Pipeline</h3>
+          <p>
+            End-to-end news ETL pipeline ingesting 25+ international RSS feeds and the Currents News API.
+            DistilBERT sentiment analysis enriches each article, results are stored in PostgreSQL, and a
+            FastAPI + Streamlit stack serves a live geographic analytics dashboard covering 18 countries.
+          </p>
+          <div class="project-tags">
+            <span>Python</span><span>PySpark</span><span>PostgreSQL</span>
+            <span>FastAPI</span><span>Streamlit</span><span>Hugging Face</span>
+          </div>
+          <span class="project-link">
+            View on GitHub
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M7 17L17 7M7 7h10v10"/>
+            </svg>
+          </span>
+        </a>
 
-  <div class="project-card">
-    <h3>
-      <a href="https://github.com/Tristdissmiss/credit-risk" target="_blank">
-        Credit Risk Prediction Using Machine Learning
-      </a>
-    </h3>
-    <p>Built a model that predicts borrower risk using XGBoost and financial data insights.</p>
-  </div>
+        <a class="project-card"
+           href="https://github.com/Tristdissmiss/highlight-generator"
+           target="_blank" rel="noopener">
+          <div class="project-top">
+            <span class="chip">Computer Vision · ML</span>
+          </div>
+          <h3>AI-Powered Video Processing</h3>
+          <p>Developed a system to generate highlight reels from sports footage using OpenCV filters, transitions, and an XGBoost classifier.</p>
+          <div class="project-tags">
+            <span>Python</span><span>OpenCV</span><span>XGBoost</span>
+          </div>
+          <span class="project-link">
+            View on GitHub
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M7 17L17 7M7 7h10v10"/>
+            </svg>
+          </span>
+        </a>
 
-  <div class="project-card">
-    <h3>
-      <a href="https://github.com/Tristdissmiss/PathMarkBOT/tree/main/pathbot" target="_blank">
-        PathMark Interactive BOT
-      </a>
-    </h3>
-    <p>Created a voice-enabled AI shopping assistant for in-store grocery guidance.</p>
-  </div>
-</section>
+        <a class="project-card"
+           href="https://github.com/Tristdissmiss/diabetes-analytics"
+           target="_blank" rel="noopener">
+          <div class="project-top">
+            <span class="chip">Healthcare · ML</span>
+          </div>
+          <h3>Predictive Analytics for Diabetes Management</h3>
+          <p>Applied ML techniques to improve health outcomes and forecast emergency risk for diabetic patients.</p>
+          <div class="project-tags">
+            <span>Python</span><span>scikit-learn</span><span>Pandas</span>
+          </div>
+          <span class="project-link">
+            View on GitHub
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M7 17L17 7M7 7h10v10"/>
+            </svg>
+          </span>
+        </a>
 
+        <a class="project-card"
+           href="https://github.com/Tristdissmiss/credit-risk"
+           target="_blank" rel="noopener">
+          <div class="project-top">
+            <span class="chip">Fintech · ML</span>
+          </div>
+          <h3>Credit Risk Prediction</h3>
+          <p>Built a model that predicts borrower risk using XGBoost and financial data insights.</p>
+          <div class="project-tags">
+            <span>Python</span><span>XGBoost</span><span>Feature Engineering</span>
+          </div>
+          <span class="project-link">
+            View on GitHub
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M7 17L17 7M7 7h10v10"/>
+            </svg>
+          </span>
+        </a>
 
-    <section id="certificates" class="hidden section">
-      <h2>Certificates</h2>
-      <ul>
-        <li>Build Fellowship</li>
-        <li>CodePath TIP102</li>
-        <li>Udemy Full-Stack Web Development Bootcamp</li> 
-        <li>Udemy Python for Data Science & Machine Learning</li>
+        <a class="project-card"
+           href="https://github.com/Tristdissmiss/PathMarkBot"
+           target="_blank" rel="noopener">
+          <div class="project-top">
+            <span class="chip">Voice · OCR · Full-Stack</span>
+          </div>
+          <h3>PathMark Interactive Bot</h3>
+          <p>Voice-enabled AI shopping assistant for in-store grocery guidance, with OCR list-reading and spatial inventory lookup.</p>
+          <div class="project-tags">
+            <span>FastAPI</span><span>EasyOCR</span><span>PostgreSQL</span><span>Streamlit</span>
+          </div>
+          <span class="project-link">
+            View on GitHub
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M7 17L17 7M7 7h10v10"/>
+            </svg>
+          </span>
+        </a>
 
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section hidden">
+      <div class="section-head">
+        <p class="eyebrow">03 — Skills</p>
+        <h2>Tools I work with.</h2>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h4>Languages</h4>
+          <ul>
+            <li>Python</li><li>SQL</li><li>JavaScript</li><li>Java</li><li>HTML / CSS</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h4>Data & ML</h4>
+          <ul>
+            <li>Pandas</li><li>NumPy</li><li>scikit-learn</li><li>XGBoost</li>
+            <li>Hugging Face</li><li>PyTorch</li><li>OpenCV</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h4>Backend & Data</h4>
+          <ul>
+            <li>FastAPI</li><li>Flask</li><li>PostgreSQL</li><li>SQLAlchemy</li>
+            <li>REST APIs</li><li>PySpark</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h4>Frontend & Tools</h4>
+          <ul>
+            <li>Streamlit</li><li>Git / GitHub</li><li>Docker</li>
+            <li>Linux</li><li>Plotly</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATES -->
+    <section id="certificates" class="section hidden">
+      <div class="section-head">
+        <p class="eyebrow">04 — Certificates</p>
+        <h2>Credentials.</h2>
+      </div>
+
+      <ul class="cert-list">
+        <li><span class="cert-name">Build Fellowship</span></li>
+        <li><span class="cert-name">CodePath TIP102</span></li>
       </ul>
     </section>
 
-    <section id="contact" class="hidden section">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:tristanlouie7@gmail.com">tristanlouie7@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/Tristdissmiss" target="_blank">github.com/Tristdissmiss</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/tristan-louis-097659236/" target="_blank">linkedin.com/in/tristan-louis-097659236</a></p>
+    <!-- RESUME -->
+    <section id="resume" class="section hidden">
+      <div class="section-head">
+        <p class="eyebrow">05 — Resume</p>
+        <h2>Data-driven.</h2>
+      </div>
+      <p class="section-intro">
+        View or download my resume below for a full breakdown of experience, projects, and education.
+      </p>
+
+      <div class="resume-frame">
+        <iframe src="files/resume.pdf" title="Tristan Louis Resume"></iframe>
+      </div>
+
+      <a href="files/resume.pdf" class="download-button" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 3v12M6 15l6 6 6-6M5 21h14"/>
+        </svg>
+        Download Resume
+      </a>
     </section>
 
+    <!-- CONTACT -->
+    <section id="contact" class="section hidden">
+      <div class="section-head">
+        <p class="eyebrow">06 — Contact</p>
+        <h2>Let's build something.</h2>
+      </div>
+      <p class="section-intro">
+        Open to full-time roles and collaboration in data engineering, ML, and full-stack development.
+      </p>
 
-    <section id="resume" class="hidden section">
-      <h2>Resume</h2>
-      <p>I am a full-stack and data-driven developer passionate about building impactful software powered by AI and analytics. View or download my resume below.</p>
-
-      <iframe src="files/resume.pdf" width="100%" height="750px" style="border:none; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.2); margin-top: 20px;"></iframe>
-
-      <a href="files/resume.pdf" class="download-button" target="_blank">📄 Download Resume</a>
+      <div class="contact-grid">
+        <a class="contact-card" href="mailto:tristanlouie7@gmail.com">
+          <span class="contact-label">Email</span>
+          <span class="contact-value">tristanlouie7@gmail.com</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M7 17L17 7M7 7h10v10"/>
+          </svg>
+        </a>
+        <a class="contact-card" href="mailto:tristanlouis68@login.cuny.edu">
+          <span class="contact-label">School Email</span>
+          <span class="contact-value">tristanlouis68@login.cuny.edu</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M7 17L17 7M7 7h10v10"/>
+          </svg>
+        </a>
+        <a class="contact-card" href="https://github.com/Tristdissmiss" target="_blank" rel="noopener">
+          <span class="contact-label">GitHub</span>
+          <span class="contact-value">github.com/Tristdissmiss</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M7 17L17 7M7 7h10v10"/>
+          </svg>
+        </a>
+        <a class="contact-card" href="https://www.linkedin.com/in/tristan-louis-097659236/" target="_blank" rel="noopener">
+          <span class="contact-label">LinkedIn</span>
+          <span class="contact-value">linkedin.com/in/tristan-louis</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M7 17L17 7M7 7h10v10"/>
+          </svg>
+        </a>
+      </div>
     </section>
+
+    <footer>
+      <p>© 2026 Tristan Louis </p>
+    </footer>
+
   </main>
 
   <script src="script.js"></script>
